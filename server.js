@@ -37,7 +37,9 @@ app.post('/bfhl', (req, res) => {
     const lowercaseAlphabets = alphabets.filter(char => /[a-z]/.test(char));
     const highestLowercase = lowercaseAlphabets.length > 0 ? Math.max(...lowercaseAlphabets.map(c => c.charCodeAt(0))) : null;
     const highestLowercaseChar = highestLowercase ? String.fromCharCode(highestLowercase) : null;
-  
+    
+    alphabets = ["a"]
+
     res.json({
       is_success: true,
       user_id: 'nakshatra_aich_19112002',
